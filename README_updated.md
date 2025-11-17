@@ -26,6 +26,8 @@ The analysis covers 117 countries from 1990-2023, with rigorous temporal train/t
 - However, learned policy is mostly static (doesn't respond dynamically to feature perturbations)
 - Agent learns historical risk patterns rather than economic reasoning about individual variables
 
+P.S. Some small inconsistencies in numbers and comments are caused by runing the projects several times which had it impact.
+
 ## Project Structure
 
 ```
