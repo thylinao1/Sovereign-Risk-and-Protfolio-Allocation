@@ -228,54 +228,6 @@ The agent learned to underweight serial defaulters (Venezuela, Argentina, Ukrain
 
 **Conclusion**: The PPO agent learned to recognize overall state patterns and map them to a relatively fixed allocation, but doesn't perform economic reasoning about individual variables. It's pattern matching, not causal understanding. The improvement is real, but comes from learning historical risk patterns rather than dynamic assessment.
 
-## Installation
-
-### Requirements
-
-```
-pandas>=1.3.0
-numpy>=1.20.0
-scikit-learn>=0.24.0
-tensorflow>=2.8.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-requests>=2.25.0
-scipy>=1.7.0
-```
-
-### Setup
-
-```bash
-# Clone repository
-git clone https://github.com/yourusername/sovereign-risk-ml.git
-cd sovereign-risk-ml
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Get FRED API key (free)
-# Visit: https://fred.stlouisfed.org/docs/api/api_key.html
-
-# Set API key in notebook or environment
-export FRED_API_KEY="your_key_here"
-```
-
-## Running the Analysis
-
-1. **Open the notebook**
-   ```bash
-   jupyter notebook sovereign_default_prediction.ipynb
-   ```
-
-2. **Set your FRED API key** in the configuration cell
-
-3. **Run cells sequentially**
-   - Data fetching takes ~10-15 minutes (API rate limits)
-   - Model training takes ~5 minutes on CPU
-   - RL training takes ~10 minutes for 300 episodes
-
-4. **Note**: World Bank API can be flaky. If you get timeout errors, wait a minute and rerun the cell.
-
 ## Limitations and Lessons Learned
 
 ### Data Limitations
@@ -297,20 +249,7 @@ export FRED_API_KEY="your_key_here"
 3. **RL learns shortcuts**: Agent found pattern matching solution instead of economic reasoning
 4. **Honest evaluation matters**: Sensitivity analysis revealed the policy isn't doing what we hoped
 
-### What I Would Do Differently
-- Start with gradient boosting and proper hyperparameter tuning
-- Add lag features (3-month, 6-month, 12-month changes)
-- Use RF predictions as state features for RL instead of raw macro
-- Try simpler RL formulation (discrete actions, fewer countries)
-- Collect more training data (corporate defaults, longer history)
-
 ## Future Directions
-
-### Short-term Improvements
-- Hyperparameter optimization for gradient boosting (GridSearchCV)
-- Feature engineering: rolling windows, momentum indicators, cross-country correlations
-- Ensemble methods: Stack RF and GBM predictions
-- Better imputation: Multiple imputation or country-specific interpolation
 
 ### Medium-term Extensions
 - Use prediction probabilities as RL state features
@@ -332,12 +271,6 @@ export FRED_API_KEY="your_key_here"
 - Reinhart, C. M., & Rogoff, K. S. (2009). This Time is Different: Eight Centuries of Financial Folly
 - S&P Global Ratings Sovereign Default Studies
 
-### Technical References
-- [OpenAI Spinning Up - PPO](https://spinningup.openai.com/en/latest/algorithms/ppo.html)
-- [Google Recommender Systems Course](https://developers.google.com/machine-learning/recommendation)
-- Lin, T. Y., et al. (2017). Focal Loss for Dense Object Detection
-- Schulman, J., et al. (2017). Proximal Policy Optimization Algorithms
-
 ### Related Work
 - Savona, R., & Vezzoli, M. (2015). Fitting and forecasting sovereign defaults using multiple risk signals
 - Manasse, P., & Roubini, N. (2009). Rules of thumb for sovereign debt crises
@@ -346,12 +279,6 @@ export FRED_API_KEY="your_key_here"
 ## Author
 
 **Maksim Silchenko**  
-MSc Candidate, Quantitative Finance  
-October 2025
-
-## License
-
-This project is for educational and research purposes. The code is provided as-is without warranty. Not intended for actual trading decisions.
 
 ---
 
