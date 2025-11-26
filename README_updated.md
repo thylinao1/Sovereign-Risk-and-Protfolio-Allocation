@@ -28,18 +28,6 @@ The analysis covers 117 countries from 1990-2023, with rigorous temporal train/t
 
 P.S. Some small inconsistencies in numbers and comments are caused by runing the projects several times which had it impact.
 
-## Project Structure
-
-```
-sovereign-risk-ml/
-├── sovereign_default_prediction.ipynb    # Main analysis notebook (full pipeline)
-├── README.md                              # This file
-├── requirements.txt                       # Python dependencies
-└── data/                                  # Created during runtime
-    ├── domestic_indicators.csv           # World Bank data cache
-    └── global_factors.csv                # FRED data cache
-```
-
 ## Technical Implementation
 
 ### Data Collection
