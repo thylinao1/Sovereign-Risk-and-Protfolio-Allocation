@@ -9,7 +9,7 @@ This project builds an end-to-end pipeline for sovereign credit risk analysis:
 2. **Default Prediction**: Comparison of neural networks vs. traditional ML models
 3. **Portfolio Optimization**: Reinforcement learning for risk-aware bond allocation
 
-The analysis covers 117 countries from 1990-2023, with rigorous temporal train/test splits to prevent data leakage.
+The analysis covers 117 countries from 1990-2023, with temporal train/test splits to prevent data leakage.
 
 ## Key Findings
 
