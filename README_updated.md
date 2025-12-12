@@ -218,7 +218,7 @@ The agent learned to underweight serial defaulters (Venezuela, Argentina, Ukrain
 
 **Conclusion**: The PPO agent learned to recognize overall state patterns and map them to a relatively fixed allocation, but doesn't perform economic reasoning about individual variables. It's pattern matching, not causal understanding. The improvement is real, but comes from learning historical risk patterns rather than dynamic assessment.
 
-## Limitations and Lessons Learned
+## Limitations
 
 ### Data Limitations
 - **Limited samples**: Only ~3000 training observations makes deep learning struggle
@@ -269,7 +269,3 @@ The agent learned to underweight serial defaulters (Venezuela, Argentina, Ukrain
 ## Author
 
 **Maksim Silchenko**  
-
----
-
-*This project began as an ambitious attempt to apply neural embedding ideas from recommender systems to sovereign credit risk. The two-tower architecture hypothesis seemed elegant: separate domestic vulnerability from global stress factors and learn their interaction. Reality was humbling—the neural network got beaten by Random Forest, and the RL agent learned pattern matching instead of economic reasoning. But that's research: you learn more from what doesn't work than from what does. The simpler approaches (Random Forest, basic risk heuristics) turned out to be more robust, which is itself a valuable finding for practitioners.*
